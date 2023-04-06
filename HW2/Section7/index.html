@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Starting Lineup</title>
+</head>
+<body>
+   <h1>Starting Lineup</h1>
+   
+   <!-- Place your form here -->
+   <form method="POST" action="https://wp.zybooks.com/form-viewer.php">
+      <p>
+        <fieldset>
+          <legend>Status:</legend>
+          <p>
+            <label>
+              <input type="radio" name="status" value="Draft">Draft
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="radio" name="status" value="Final" checked>Final
+            </label>
+          </p>
+        </fieldset>
+      </p>
+      
+      <p>
+        <label for="gameDate">Game date:</label>
+        <select name="gameDate" id="gameDate">
+          <option value="March 20">March 20</option>
+          <option value="March 24">March 24</option>
+          <option value="April 2">April 2</option>
+          <option value="April 6">April 6</option>
+          <option value="April 13">April 13</option>
+        </select>
+      </p>
+    
+      <p>
+        <fieldset>
+          <legend>Players:</legend>
+          <p>
+            <label>
+              <input type="checkbox" name="player" value="Aarav Agarwal">Aarav Agarwal
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="player" value="Ava Johnson">Ava Johnson
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="player" value="Julio Ortiz">Julio Ortiz
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="player" value="Liam Rubio">Liam Rubio
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="player" value="Emma Witherspoon">Emma Witherspoon
+            </label>
+          </p>
+        </fieldset>
+      </p>
+    
+      <p>
+        <input type="submit" value="Submit">
+      </p>
+    </form>
+    
+   
+</body>
+
+</html>
