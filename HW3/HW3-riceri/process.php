@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
    <meta charset="utf-8">
    <title>HW3</title>
    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
@@ -15,7 +15,6 @@
         <a href="index.html">Main Page</a>
     </nav>
     <main>
-        <section>
         <?php 
             if (count($_GET) == 0)
                 echo "<p><em>You didn't enter any data</em></p>";
@@ -24,7 +23,6 @@
             }
             echo "<p>Your information was Sent!!</p>";
 	    ?>
-        </section>
     </main>
     <footer>
         <p>Copyright &copy; - 2023 Riley Rice</p>
