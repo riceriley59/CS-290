@@ -7,11 +7,12 @@
 </head>
 <body>
     <header>
-        <h1>Riley Rice</h1>
+        <h1>Riley Rice - <span class="header">Submitted</span></h1>
     </header>
     <nav>
         <a href="form.html">Contact Form</a>
         <a href="contact.html">Contact</a>
+        <a href="index.html">Main Page</a>
     </nav>
     <main>
         <section>
