@@ -1,0 +1,122 @@
+body{
+    background-image: url(images/mountains.jpg);
+    margin: auto;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+header{
+    
+}
+
+main{
+
+}
+
+footer{
+
+}
+
+nav{
+  
+}
+
+nav a{
+    border: 1px solid black;
+    border-radius: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    background-color: grey;
+}
+
+.code-table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 70vw;
+    border-collapse: collapse;
+}
+
+.code-table, .code-table th, .code-table td{
+    border: 1px solid black;
+}
+
+.code-table th{
+    background-color: grey;
+    padding-bottom: 10px;
+}
+
+section a{
+    text-decoration: none;
+    color: white;
+}
+
+section a:hover{
+    color: grey;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.header{
+    color: darkgrey;
+}
+
+ul, ol{
+    display: inline-block;
+    text-align: left;
+}
+
+main section img, main img{
+    width: 50vw;
+    height: 50vh;
+}
+
+main section fieldset{
+    width: 20vw;
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+
+input[type=submit] {
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid black;
+}
+  
+
+input[type=submit]:hover {
+    background-color: grey;
+}
+  
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+} 
