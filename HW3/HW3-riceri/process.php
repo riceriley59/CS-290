@@ -10,23 +10,23 @@
         <h1>Riley Rice</h1>
     </header>
     <nav>
-        <a href="form.html"></a>
-        <a href="contact.html"></a>
+        <a href="form.html">Contact Form</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <main>
         <section>
-
+        <?php 
+            if (count($_GET) == 0)
+                echo "<p><em>You didn't enter any data</em></p>";
+            foreach ($_GET as $key => $value) { 
+                echo "<strong>" . $key . "=</strong>" . $value . "</br>";
+                echo "<p>Your information was Sent!!";
+            }
+	    ?>
         </section>
     </main>
     <footer>
         <p>Copyright &copy; - 2023 Riley Rice</p>
     </footer>
-	<?php 
-		if (count($_GET) == 0)
-			echo "<p><em>There are no GET variables</em></p>";
-		foreach ($_GET as $key => $value) { 
-			echo "<strong>" . $key . "=</strong>" . $value . "</br>";
-		}
-	?>
 </body>
 </html>
