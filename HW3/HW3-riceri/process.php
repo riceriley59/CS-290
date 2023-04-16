@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
    <meta charset="utf-8">
-   <title>Riley Rice</title>
+   <title>HW3</title>
    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
 </head>
 <body>
