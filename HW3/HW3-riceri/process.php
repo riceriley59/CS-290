@@ -20,8 +20,8 @@
                 echo "<p><em>You didn't enter any data</em></p>";
             foreach ($_GET as $key => $value) { 
                 echo "<strong>" . $key . "=</strong>" . $value . "</br>";
-                echo "<p>Your information was Sent!!";
             }
+            echo "<p>Your information was Sent!!</p>";
 	    ?>
         </section>
     </main>
