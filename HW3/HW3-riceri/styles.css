@@ -34,7 +34,7 @@ nav a:hover{
     background-color: grey;
 }
 
-.code-table{
+#code-table{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -42,11 +42,11 @@ nav a:hover{
     border-collapse: collapse;
 }
 
-.code-table, .code-table th, .code-table td{
+#code-table, #code-table th, #code-table td{
     border: 1px solid black;
 }
 
-.code-table th{
+#code-table th{
     background-color: grey;
     padding-bottom: 10px;
 }
@@ -60,7 +60,7 @@ section a:hover{
     color: grey;
 }
 
-.underlined{
+#underlined{
     text-decoration: underline;
 }
 
