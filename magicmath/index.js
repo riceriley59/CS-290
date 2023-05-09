@@ -41,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const operands = getOperandButtons();
     operands.forEach((op) => {
         op.addEventListener('click', (event) => {
-            if(gameStatus.operator === ''){
+            if(gameStatus.operator === '' && gameStatus.operand1 !== 0){
                 gameStatus.operator = event.target.innerHTML;
                 event.target.classList.remove("opbox");
                 event.target.classList.add("opbox-chosen");
@@ -117,6 +117,8 @@ function handleWin(){
 
     const messagePrompt = document.getElementById("messages");
     messagePrompt.innerHTML = "You Won!!!";
+
+    gameStatus.turns = 0;
 }
 
 function handleLoss(){
@@ -141,6 +143,8 @@ function handleLoss(){
 
     const messagePrompt = document.getElementById("messages");
     messagePrompt.innerHTML = "You Lost. Better Luck Next Time!!!";
+
+    gameStatus.turns = 0;
 }
 
 function calculateGoal(){
@@ -161,6 +165,10 @@ function calculateGoal(){
 }
 
 function newGame(){
+    if(gameStatus.turns > 0){
+        gameStatus.losses++;
+    }
+
     gameStatus.operator = '';
     gameStatus.operand1 = 0;
     gameStatus.operand2 = 0;
@@ -171,6 +179,9 @@ function newGame(){
     for(let i = workArea.rows.length - 1; i > - 1; i--){
         workArea.deleteRow(i);
     }
+
+    const messagePrompt = document.getElementById("messages");
+    messagePrompt.innerHTML = "Lets Play!";
 
     //create random values
     for(let i = 0; i < 4; i++){
