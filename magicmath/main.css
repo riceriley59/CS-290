@@ -1,0 +1,83 @@
+body{
+    height: 100vh;
+    text-align: center;
+}
+
+header, footer{
+    background-color: #D73F09;
+    color: #FFFFFF;
+}
+
+.game-board{ 
+    display: grid;
+    grid-template-columns: 120px 120px; 
+    grid-template-rows: 120px 120px 20px;
+    justify-content: center;
+    margin: 30px;
+    margin-top: 70px;
+}
+
+.box {
+    background-color: #d9d9d9;
+    border: 1px solid black;
+    margin: 1px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.operands{ 
+    display: grid;
+    grid-template-columns: 60px; 
+    grid-template-rows: 60px 60px 60px;
+    justify-content: center;
+    margin: 30px;
+}
+
+.opbox {
+    background-color: #f5f5f5;
+    border: 1px solid lightblue;
+    margin: 1px;
+    color: lightblue;
+    font-size: 2em;
+}
+
+.new-game {
+    display: inline-block;
+    background: #339DFF;
+    color: #F9F9F9;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 25px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 120px;
+    text-align: center;
+}
+  
+.new-game:hover {
+    background: #F9F9F9;
+    color: #339DFF;
+}
+
+.work-area{
+    border: 1px solid black;
+    width: 275px;
+    height: 275px;
+    margin: 30px;
+}
+
+.work-area th{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.game-elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wins{
+    margin-right: 20px;
+}
