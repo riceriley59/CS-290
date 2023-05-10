@@ -1,3 +1,8 @@
+<!--
+    Riley Rice 5/9/2023
+    Course: CS290 Section#: 01
+-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,14 +14,19 @@
     <script src='index.js'></script>
 </head>
 <body>
+    <!--This holds the header for the top of the web application-->
     <header>
         <h1>Magic Math</h1>
     </header>
+    <!--This holds all the content other than the header and footer-->
     <section>
+        <!--div which holds the goal win and losses prompts-->
         <div>
             <h3>Goal: <span id="goal"></span></h3>
             <h3>Wins: <span id="wins"></span> Losses: <span id="losses"></span></h3>
         <div>
+        <!--This holds all the game elements such as the gameboard, operator boxes,
+            and work area.-->
         <div class="game-elements">
             <div class = "game-board">
                 <button id="box" class="box"></button>
@@ -33,11 +43,13 @@
                 <caption style="color: lightblue; font-weight: bold;">Work Area</caption>
             </table>
         </div>
+        <!--This holds the new game button and message prompt-->
         <div>
             <h3 id="messages"></h3>
             <button id='newBtn' class="new-game">New Game</button>
         </div>
     </section>
+    <!--This is the footer for the web application-->
     <footer>
         <p>Riley Rice - 5/8/2023</p>
     </footer>

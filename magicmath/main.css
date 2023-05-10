@@ -1,13 +1,26 @@
+/*
+    Riley Rice 5/9/2023
+    Course: CS290 Section#: 01
+*/
+
+/*This allows the content to be centered and span the whole height
+    of the screen.
+*/
 body{
     height: 100vh;
     text-align: center;
 }
 
+/*This changes the color for the header and footer*/
 header, footer{
     background-color: #D73F09;
     color: #FFFFFF;
 }
 
+/*This is the css class for the sqaures that have the numbers
+    it defines them as a grid display and sets the size for the
+    grid elements.
+*/
 .game-board{ 
     display: grid;
     grid-template-columns: 120px 120px; 
@@ -17,6 +30,9 @@ header, footer{
     margin-top: 70px;
 }
 
+/*This is the css class for each of the individual box buttons
+    in the game board.
+*/
 .box {
     background-color: #d9d9d9;
     border: 1px solid black;
@@ -25,15 +41,24 @@ header, footer{
     font-weight: bold;
 }
 
+/*This is a psuedoclass for the css boxes which is activated 
+    when the cursor hovers over it.
+*/
 .box:hover{
     background-color: lightgray;
 }
 
+/*This is the css class for the grid sqaures when they are 
+    chosen as an operand.
+*/
 .box-chosen{
     background-color: transparent;
     border: 1px solid black;
 }
 
+/*This is the css class for the operator sqaure and it defines them
+    as a grid and sets the size for the elements.
+*/
 .operands{ 
     display: grid;
     grid-template-columns: 60px; 
@@ -42,6 +67,9 @@ header, footer{
     margin: 30px;
 }
 
+/*This is the css class for each of the operand boxes it defines
+    how they look.
+*/
 .opbox {
     background-color: #f5f5f5;
     border: 1px solid lightblue;
@@ -50,10 +78,16 @@ header, footer{
     font-size: 2em;
 }
 
+/*This is a psuedoclass for the css operand boxes which is activated
+    when the cursor hovers over it.
+*/
 .opbox:hover{
     background-color: transparent;
 }
 
+/*This is the css class for the operator boxes when they are chosen 
+    as the operator for the equation.
+*/
 .opbox-chosen {
     background-color: #f5f5f5;
     border: 1px solid lightblue;
@@ -62,6 +96,7 @@ header, footer{
     font-size: 2em;
 }
 
+/*This is the css class which defines the new game button.*/
 .new-game {
     display: inline-block;
     background: #339DFF;
@@ -74,12 +109,18 @@ header, footer{
     width: 120px;
     text-align: center;
 }
-  
+
+/*This is a psuedoclass for the newgame button which is activated
+    when the cursor hovers over it.
+*/
 .new-game:hover {
     background: #F9F9F9;
     color: #339DFF;
 }
 
+/*This is the css class for the table which is used as the work-area
+    in the application.
+*/
 .work-area{
     border: 1px solid black;
     width: 275px;
@@ -87,18 +128,16 @@ header, footer{
     margin: 30px;
 }
 
-.work-area th{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-
+/*This is the css class for the container that holds all the game elements
+    such as the gameboard, operator boxes, and work area. 
+*/
 .game-elements{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*This class is used to space out the wins and losses prompts a little bit.*/
 #wins{
     margin-right: 20px;
 }
