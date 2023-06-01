@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Song = require('./models/song');
+const Song = require('../models/song');
 
 router.get('/songs', (req, res) => {
     Song.find((err, songs) => {
@@ -10,3 +10,5 @@ router.get('/songs', (req, res) => {
         }
     });
 });
+
+module.exports = router;

@@ -1,6 +1,5 @@
 const express = require('express');
 const cors = require('cors');
-const Song = require('./models/song');
 
 const app = express()
 
