@@ -9,4 +9,6 @@ app.use(cors());
 
 app.use("/api/songs", require('./api/songs'));
 
-app.listen(process.env.PORT, () => {console.log(`started server on port: ${process.env.PORT}`)});
+let port = process.env.PORT || 3000
+
+app.listen(port, () => {console.log(`started server on port: ${process.env.PORT}`)});
