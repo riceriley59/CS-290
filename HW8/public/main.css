@@ -3,6 +3,10 @@ body{
     color: #d8dee9;
 }
 
+main{
+    text-align: center;
+}
+
 header{
     display: flex;
     flex-direction: column;
