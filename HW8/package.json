@@ -6,8 +6,7 @@
     "mongodb": "^5.5.0",
     "mongoose": "^7.2.2",
     "nodemon": "^2.0.22",
-    "nvm": "^0.0.4",
-    "path": "^0.12.7"
+    "nvm": "^0.0.4"
   },
   "scripts": {
     "start": "nodemon server.js"
