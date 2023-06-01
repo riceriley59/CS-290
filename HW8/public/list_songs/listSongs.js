@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         const songs = await response.json();
 
         let table = document.getElementById("songTable");
-        
     }catch{
         throw new Error("Error fetching all songs from database");
     }
