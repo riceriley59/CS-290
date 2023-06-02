@@ -1,25 +1,24 @@
 const router = require('express').Router();
 const Song = require('../models/song');
 
-router.get('/', (req, res) => {
-    Song.find((err, songs) => {
-        if(err){
-            res.status(400).send(err);
-        }else{
-            res.json(songs);
-        }
-    });
+router.get('/', async (req, res) => {
+    try{
+        let results = await Song.find();
+        res.json(results);
+    }catch(err){
+        res.status(400).send(err);
+    }
 });
 
-router.post('/', (req, res) => {
-    const song = new Song(req.body);
-    song.save((err, song) => {
-        if(err){
-            res.status(400).send(err);
-        }else{
-            res.status(201).json(song);
-        }
-    });
+router.post('/', async (req, res) => {
+    try{
+        const song = new Song(req.body);
+        const result = await song.save();
+
+        res.status(201).json(song);
+    }catch(err){
+        res.status(400).send(err);
+    }
 });
 
 module.exports = router;

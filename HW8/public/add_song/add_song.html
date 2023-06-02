@@ -28,28 +28,29 @@
             <legend><p>Song Details</p></legend>
             <form id="songForm">
                 <div>
-                    <label>Title: </label>
-                    <input>
+                    <label for="title">Title: </label>
+                    <input id="title" type="text" maxlength="30" pattern="[a-zA-Z0-9 ]+" placeholder="Ex. Sandman" required>
                 </div>
                 <div>
-                    <label>Artist: </label>
-                    <input>
+                    <label for="artist">Artist: </label>
+                    <input id="artist" maxlength="30" type="text" pattern="[a-zA-Z0-9 ]+" placeholder="Ex. Metallica" required>
                 </div>
                 <div>
-                    <label>Released: </label>
-                    <input>
+                    <label for="released">Released: </label>
+                    <input id="released" type="date" required>
                 </div>
                 <div>
-                    <label>Popularity: </label>
-                    <input>
+                    <label for="popularity">Popularity: </label>
+                    <input id="popularity" type="number" min="0" max="10" placeholder="0-10" required>
                 </div>
                 <div>
-                    <label>Genre(s): </label>
-                    <input>
+                    <label for="genre">Genre(s): </label>
+                    <input id= "genre" maxlength="40" type="text" pattern="[a-zA-Z0-9, ]+" placeholder="Ex. Rock, Metal" required>
                 </div>
+                <input type="submit" id="addBtn" value="Add Song">
             </form>
         </fieldset>
-        <button id="addBtn" class="button">Add Song</button>
+        <p id="error"></p>
     </main>
     <footer>
         <p>&copy; 2023 The Music Company -- Created by Riley Rice</p>
