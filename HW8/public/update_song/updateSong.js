@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         throw new Error(err);
     }
 
-    document.querySelector('#songForm').addEventListener('submit', (e) => {
+    document.querySelector('#songForm').addEventListener('submit', async (e) => {
         e.preventDefault();
         
         const song = {
@@ -63,10 +63,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 document.querySelector("#genre").value.split(",") : []
         };
         
-        fetch("/api/songs/update", {
+        let response = await fetch("/api/songs/update", {
             method: "PUT",
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(song)
         });
+
+        if(response.ok){
+            const results = await response.json();
+            document.querySelector("#error").innerHTML = `Updated Song with ID: ${results._id}`;
+
+            document.querySelector("#songForm").reset();
+        }
     });
 });

@@ -65,7 +65,8 @@ router.put('/update', async (req, res) => {
     try{
         let song = req.body
         let response = await Song.updateOne({ _id: song._id }, song);
-        res.status(200);
+        
+        res.status(200).json(song);
     }catch(err){
         console.log(err);
     }

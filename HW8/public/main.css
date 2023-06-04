@@ -178,4 +178,15 @@ select option{
 #updateContents{
     display: flex;
     flex-direction: row;
+    padding: 50px;
+    align-items: flex-start;
+}
+
+#updateContents table{
+    margin-right: 50px;
+    align-self: center;
+}
+
+#error{
+    text-align: center;
 }

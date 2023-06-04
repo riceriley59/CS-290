@@ -36,37 +36,39 @@
     
                 </tbody>
             </table>
-            <fieldset id="set" hidden>
-                <legend><p>Song Details</p></legend>
-                <form id="songForm">
-                    <div>
-                        <label for="id">ID: </label>
-                        <input id="id" type="text" pattern="[a-zA-Z0-9 .]+" maxlength="30" placeholder="Ex. 647bf340f8fb3f305d5fb739" required>
-                    </div>
-                    <div>
-                        <label for="title">Title: </label>
-                        <input id="title" type="text" maxlength="30" pattern="[a-zA-Z0-9 .]+" placeholder="Ex. Sandman" required>
-                    </div>
-                    <div>
-                        <label for="artist">Artist: </label>
-                        <input id="artist" maxlength="30" type="text" pattern="[a-zA-Z0-9 .]+" placeholder="Ex. Metallica" required>
-                    </div>
-                    <div>
-                        <label for="released">Released: </label>
-                        <input id="released" type="date" required>
-                    </div>
-                    <div>
-                        <label for="popularity">Popularity: </label>
-                        <input id="popularity" type="number" min="0" max="10" placeholder="0-10" required>
-                    </div>
-                    <div>
-                        <label for="genre">Genre(s): </label>
-                        <input id= "genre" maxlength="40" type="text" pattern="[a-zA-Z0-9, ]+" placeholder="Ex. Rock, Metal" required>
-                    </div>
-                    <p id="error"></p>
-                    <input type="submit" id="addBtn" value="Update Song">
-                </form>
-            </fieldset>
+            <div>
+                <fieldset id="set" hidden>
+                    <legend><p>Song Details</p></legend>
+                    <form id="songForm">
+                        <div>
+                            <label for="id">ID: </label>
+                            <input id="id" type="text" pattern="[a-zA-Z0-9 .]+" maxlength="30" placeholder="Ex. 647bf340f8fb3f305d5fb739" required>
+                        </div>
+                        <div>
+                            <label for="title">Title: </label>
+                            <input id="title" type="text" maxlength="30" pattern="[a-zA-Z0-9 .]+" placeholder="Ex. Sandman" required>
+                        </div>
+                        <div>
+                            <label for="artist">Artist: </label>
+                            <input id="artist" maxlength="30" type="text" pattern="[a-zA-Z0-9 .]+" placeholder="Ex. Metallica" required>
+                        </div>
+                        <div>
+                            <label for="released">Released: </label>
+                            <input id="released" type="date" required>
+                        </div>
+                        <div>
+                            <label for="popularity">Popularity: </label>
+                            <input id="popularity" type="number" min="0" max="10" placeholder="0-10" required>
+                        </div>
+                        <div>
+                            <label for="genre">Genre(s): </label>
+                            <input id= "genre" maxlength="40" type="text" pattern="[a-zA-Z0-9, ]+" placeholder="Ex. Rock, Metal" required>
+                        </div>
+                        <input type="submit" id="addBtn" value="Update Song">
+                    </form>
+                </fieldset>
+                <p id="error"></p>
+            </div>
         </div>
     </main>
     <footer>
