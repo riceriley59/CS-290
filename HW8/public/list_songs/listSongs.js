@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         const response = await fetch("/api/songs");
         const songs = await response.json();
 
-        let table = document.querySelector("#songTable");
+        let tbody = document.querySelector("#tbody");
         for(let song of songs){
-            let newRow = table.insertRow(-1);
+            let newRow = tbody.insertRow(-1);
 
             let id = newRow.insertCell(-1);
             id.appendChild(document.createTextNode(song._id))

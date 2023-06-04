@@ -23,7 +23,28 @@
         </div>
     </header>
     <main>
-        <h3>Song Catalog - Select from the menu above</h3>
+        <h3>Search by Genre</h3>
+        <div class="genre-search">
+            <select id="genre-options">
+                <option disabled selected>Choose Option</option>
+            </select>
+            <button id="search" class="button">Search</button>
+        </div>
+        <table id="songTable" hidden>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Released</th>
+                    <th>Popularity</th>
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
     </main>
     <footer>
         <p>&copy; 2023 The Music Company -- Created by Riley Rice</p>

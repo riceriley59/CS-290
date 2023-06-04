@@ -7,9 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
             artist: document.querySelector("#artist").value,
             releaseDate: document.querySelector("#released").value,
             popularity: document.querySelector("#popularity").value,
-            genre: document.querySelector("#genre").value ?
-                document.querySelector("#genre").value.split(',') : []
+            genre: []
         };
+
+        if(document.querySelector('#genre').value){
+            let words = document.querySelector("#genre").value.split(',');
+
+            for(let i = 0; i < words.length; i++){
+                words[i] = words[i].toLowerCase();
+                if(words[i].charAt(0) == " "){
+                    words[i] = words[i].substring(1);
+                }
+            }
+
+            song.genre = words;
+        }
 
         const response = await fetch("/api/songs", {
             method: "POST",

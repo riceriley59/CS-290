@@ -104,7 +104,7 @@ fieldset p{
     border: 1px solid transparent;
 }
 
-#songForm input[type=submit] {
+#songForm input[type=submit], .button {
   background-color: #5e81ac;
   border-radius: 6px;
   border-width: 0;
@@ -123,7 +123,7 @@ fieldset p{
   text-align: center;
 }
 
-#songForm input[type=submit]:hover{
+#songForm input[type=submit]:hover, .button:hover{
     background-color: #d8dee9;
     color: #5e81ac;
 }
@@ -140,10 +140,29 @@ fieldset p{
     background-color: #434c5e;
 }
 
-#songTable tr:nth-child(odd) {
+#songTable tr:nth-child(even) {
     background-color: #81a1c1;
 }
 
 #songTable, #songTable th, #songTable td{
     border: 1px solid #4c566a;
+}
+
+select{
+    height: 44px;
+    font-family: sans-serif;
+    color: #2e3440;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+select option{
+    font-family: sans-serif;
+    color: #2e3440;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+.genre-search{
+    margin-bottom: 20px;
 }
