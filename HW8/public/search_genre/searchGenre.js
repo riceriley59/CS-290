@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
 
     }catch(err){
-        throw new Error("Error fetching genres from database");
+        console.log(err);
     }
 
     document.querySelector('#search').addEventListener('click', async () => {

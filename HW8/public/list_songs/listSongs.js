@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 genre.appendChild(document.createTextNode(song.genre));
             }
 
-            document.querySelector("#songForm").removeAttribute("hidden");
+            document.querySelector("#songTable").removeAttribute("hidden");
         }else{
             document.querySelector("#header").innerHTML = "List Songs - No Songs in the Database";
         }
