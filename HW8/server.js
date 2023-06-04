@@ -11,4 +11,4 @@ app.use("/api/songs", require('./api/songs'));
 
 let port = process.env.PORT || 3000
 
-app.listen(port, () => {console.log(`started server on port: ${process.env.PORT}`)});
+app.listen(port, () => {console.log(`started server on port: ${port}`)});
