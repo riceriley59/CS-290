@@ -61,8 +61,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             genre: document.querySelector("#genre").value ? 
                 document.querySelector("#genre").value.split(",") : []
         };
-
-        console.log(song);
         
         fetch("/api/songs/update", {
             method: "PUT",

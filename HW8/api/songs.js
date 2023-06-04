@@ -61,8 +61,6 @@ router.get('/:title', async (req, res) => {
 });
 
 router.put('/update', (req, res) => {
-    console.log(req.body);
-
     try{
         Song.updateOne({ _id: req.body._id }, req.body);
     }catch(err){
