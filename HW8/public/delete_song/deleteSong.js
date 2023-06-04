@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', async () => {
+const handleDelete = async () => {
     let tbody = document.querySelector("#tbody");
 
     try{
         let response = await fetch('/api/songs');
         let songs = await response.json();
+
+        tbody.innerHTML = "";
 
         if(songs.length > 0){
             for(let song of songs){
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 delButton.addEventListener('click', async () => {
                     let row = delButton.parentElement.parentElement;
                     let songToDelete = row.childNodes[0].innerHTML;
+                    let songArtist = row.childNodes[1].innerHTML;
 
                     try{
                         let response = await fetch(`/api/songs/delete/${songToDelete}`, {
@@ -32,7 +35,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                         });
 
                         if(response.ok){
-
+                            handleDelete();
+                            document.querySelector("#error").innerHTML = `Deleted ${songToDelete} by ${songArtist}`;
                         }
                     }catch(err){
                         console.log(err);
@@ -48,4 +52,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }catch(err){
         throw new Error(err);
     }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    handleDelete();
 });

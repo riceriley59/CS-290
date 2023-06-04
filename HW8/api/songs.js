@@ -45,7 +45,8 @@ router.get('/genres/:genre', async (req, res) => {
 router.delete('/delete/:title', async (req, res) => {
     try{
         let response = await Song.deleteOne({ title: req.params.title });
-        res.status(200).send();
+        res.status(200).json(response);
+        console.log(response);
     }catch(err){
         console.log(err);
     }

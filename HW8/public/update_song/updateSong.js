@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', async () => {
+const handleUpdate = async () => {
     let tbody = document.querySelector("#tbody");
 
     try{
         let response = await fetch('/api/songs');
         let songs = await response.json();
+
+        tbody.innerHTML = "";
 
         if(songs.length > 0){
             for(let song of songs){
@@ -59,10 +61,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             artist: document.querySelector("#artist").value,
             releaseDate: document.querySelector("#released").value,
             popularity: document.querySelector("#popularity").value,
-            genre: document.querySelector("#genre").value ? 
-                document.querySelector("#genre").value.split(",") : []
+            genre: []
         };
         
+        if(document.querySelector('#genre').value){
+            let words = document.querySelector("#genre").value.split(',');
+
+            for(let i = 0; i < words.length; i++){
+                words[i] = words[i].toLowerCase();
+                if(words[i].charAt(0) == " "){
+                    words[i] = words[i].substring(1);
+                }
+            }
+
+            song.genre = words;
+        }
+
         let response = await fetch("/api/songs/update", {
             method: "PUT",
             headers: { "Content-Type": "application/json"},
@@ -74,6 +88,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             document.querySelector("#error").innerHTML = `Updated Song with ID: ${results._id}`;
 
             document.querySelector("#songForm").reset();
+
+            handleUpdate();
         }
     });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    handleUpdate();
 });
