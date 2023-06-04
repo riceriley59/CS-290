@@ -1,8 +1,8 @@
 body{
     background-color: #2e3440;
     color: #d8dee9;
-    overflow: hidden;
     font-family: sans-serif;
+    margin: 0px;
 }
 
 main{
@@ -18,10 +18,12 @@ header{
     flex-direction: column;
     padding: 0px;
     background-color: #434c5e;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
+    margin-bottom: 100px;
+    z-index: 100;
 }
 
 .title{
@@ -67,7 +69,8 @@ header{
 footer{
     background-color: #4c566a;
     text-align: center;
-    position: absolute;
+    padding: 5px;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100vw;
@@ -123,6 +126,11 @@ fieldset p{
   text-align: center;
 }
 
+#tbody .button{
+    height: 25px;
+    padding: 0px 10px;
+}
+
 #songForm input[type=submit]:hover, .button:hover{
     background-color: #d8dee9;
     color: #5e81ac;
@@ -130,6 +138,7 @@ fieldset p{
 
 #songTable{
     border-collapse: collapse;
+    height: 60vh;
 }
 
 #songTable td{
@@ -165,4 +174,15 @@ select option{
 
 .genre-search{
     margin-bottom: 20px;
+}
+
+#updateContents{
+    display: flex;
+    flex-direction: row;
+}
+
+#updateContents fieldset{
+    margin: 0px;
+    padding-left: 0px;
+    padding: auto;
 }

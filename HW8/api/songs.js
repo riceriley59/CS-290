@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { TopologyDescription } = require('mongodb');
 const Song = require('../models/song');
 
 router.get('/', async (req, res) => {
@@ -33,12 +34,39 @@ router.get('/genres', async (req, res) => {
 
 router.get('/genres/:genre', async (req, res) => {
     try{
-        console.log(req.params.genre);
         let songs = await Song.find( { genre : { $eq: `${req.params.genre}` } } );
 
         res.json(songs);
     }catch(err){
         res.status(400).send(err);
+    }
+});
+
+router.delete('/:title', (req, res) => {
+    try{
+        Song.deleteOne({ title: req.params.title });
+    }catch(err){
+        throw new Error(err);
+    }
+});
+
+router.get('/:title', async (req, res) => {
+    try{
+        let result = await Song.findOne({ title: req.params.title });
+
+        res.json(result);
+    }catch(err){
+        throw new Error(err);
+    }
+});
+
+router.put('/update', (req, res) => {
+    console.log(req.body);
+
+    try{
+        Song.updateOne({ _id: req.body._id }, req.body);
+    }catch(err){
+        throw new Error(err);
     }
 });
 

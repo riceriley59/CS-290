@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="title">
-            <h3>Music Services</h3>
+            <h3 id="header">Music Services</h3>
         </div>
         <div class="options">
             <ul>
@@ -23,7 +23,51 @@
         </div>
     </header>
     <main>
-        <h3>Song Catalog - Select from the menu above</h3>
+        <h3>Update Songs</h3>
+        <div id="updateContents">
+            <table id="songTable" hidden>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th colspan="2">Artist</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+    
+                </tbody>
+            </table>
+            <fieldset>
+                <legend><p>Song Details</p></legend>
+                <form id="songForm">
+                    <div>
+                        <label for="id">ID: </label>
+                        <input id="id" type="text" pattern="[a-zA-Z0-9 .]+" maxlength="30" placeholder="Ex. 647bf340f8fb3f305d5fb739" required>
+                    </div>
+                    <div>
+                        <label for="title">Title: </label>
+                        <input id="title" type="text" maxlength="30" pattern="[a-zA-Z0-9 .]+" placeholder="Ex. Sandman" required>
+                    </div>
+                    <div>
+                        <label for="artist">Artist: </label>
+                        <input id="artist" maxlength="30" type="text" pattern="[a-zA-Z0-9 .]+" placeholder="Ex. Metallica" required>
+                    </div>
+                    <div>
+                        <label for="released">Released: </label>
+                        <input id="released" type="date" required>
+                    </div>
+                    <div>
+                        <label for="popularity">Popularity: </label>
+                        <input id="popularity" type="number" min="0" max="10" placeholder="0-10" required>
+                    </div>
+                    <div>
+                        <label for="genre">Genre(s): </label>
+                        <input id= "genre" maxlength="40" type="text" pattern="[a-zA-Z0-9, ]+" placeholder="Ex. Rock, Metal" required>
+                    </div>
+                    <p id="error"></p>
+                    <input type="submit" id="addBtn" value="Update Song">
+                </form>
+            </fieldset>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 The Music Company -- Created by Riley Rice</p>
