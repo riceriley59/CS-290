@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
 
             document.querySelector("#songTable").removeAttribute("hidden");
+            document.querySelector("#set").removeAttribute("hidden");
         }else{
             document.querySelector('#header').innerHTML = "Update Songs - No songs in Database";
         }
@@ -56,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             _id: document.querySelector("#id").value,
             title: document.querySelector("#title").value,
             artist: document.querySelector("#artist").value,
-            releaseDate: document.querySelector("#released"),
+            releaseDate: document.querySelector("#released").value,
             popularity: document.querySelector("#popularity").value,
             genre: document.querySelector("#genre").value ? 
                 document.querySelector("#genre").value.split(",") : []

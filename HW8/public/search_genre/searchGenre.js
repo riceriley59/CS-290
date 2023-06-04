@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         let response = await fetch('/api/songs/genres');
         let options = await response.json();
 
-        for(let i = 0; i < options.length; i++){
-            let genreOption = new Option(options[i], options[i]);
-            select.add(genreOption, undefined);
+        if(options.length > 0){
+            for(let i = 0; i < options.length; i++){
+                let genreOption = new Option(options[i], options[i]);
+                select.add(genreOption, undefined);
+            }
+
+            document.querySelector("#genre-search").removeAttribute("hidden");
+        }else{
+            document.querySelector("#header").innerHTML = "Search Genre - No Songs in the Database";
         }
 
     }catch(err){

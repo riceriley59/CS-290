@@ -138,7 +138,6 @@ fieldset p{
 
 #songTable{
     border-collapse: collapse;
-    height: 60vh;
 }
 
 #songTable td{
@@ -179,10 +178,4 @@ select option{
 #updateContents{
     display: flex;
     flex-direction: row;
-}
-
-#updateContents fieldset{
-    margin: 0px;
-    padding-left: 0px;
-    padding: auto;
 }

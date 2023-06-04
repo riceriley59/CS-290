@@ -42,11 +42,12 @@ router.get('/genres/:genre', async (req, res) => {
     }
 });
 
-router.delete('/:title', (req, res) => {
+router.delete('/delete/:title', async (req, res) => {
     try{
-        Song.deleteOne({ title: req.params.title });
+        let response = await Song.deleteOne({ title: req.params.title });
+        res.status(200).send();
     }catch(err){
-        throw new Error(err);
+        console.log(err);
     }
 });
 
@@ -60,11 +61,13 @@ router.get('/:title', async (req, res) => {
     }
 });
 
-router.put('/update', (req, res) => {
+router.put('/update', async (req, res) => {
     try{
-        Song.updateOne({ _id: req.body._id }, req.body);
+        let song = req.body
+        let response = await Song.updateOne({ _id: song._id }, song);
+        res.status(200);
     }catch(err){
-        throw new Error(err);
+        console.log(err);
     }
 });
 

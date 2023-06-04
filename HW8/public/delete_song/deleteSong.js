@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                     let songToDelete = row.childNodes[0].innerHTML;
 
                     try{
-                        let response = await fetch(`/api/songs/${songToDelete}`, {
+                        let response = await fetch(`/api/songs/delete/${songToDelete}`, {
                             method: "DELETE"
                         });
 
                         if(response.ok){
-                            
+
                         }
                     }catch(err){
-                        throw new Error("Error deleting document");
+                        console.log(err);
                     }
                 });
             }
