@@ -85,9 +85,10 @@ router.delete('/delete/:title', async (req, res) => {
         let response = await Song.deleteOne({ title: req.params.title });
 
         //if the song was deleted then return a 200 status 
-        res.status(200);
+        res.status(200).json(response);
     }catch(err){
         //if there's an error log it in the server console
+        res.status(400).send(err);
         console.log(err);
     }
 });
